@@ -958,7 +958,7 @@ ul {
 
 .ticker-track {
     display: flex;
-    animation: ticker 60s linear infinite;
+    animation: ticker 150s linear infinite;
     width: max-content;
 }
 
