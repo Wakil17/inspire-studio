@@ -958,11 +958,15 @@ ul {
 
 .ticker-track {
     display: flex;
-    align-items: center;
-    gap: 10vw;
-    padding-right: 10vw;
-    animation: ticker 45s linear infinite;
+    animation: ticker 60s linear infinite;
     width: max-content;
+}
+
+.ticker-group {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding-right: 48px;
 }
 
 .ticker-item {
@@ -971,6 +975,44 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 12px 24px;
+}
+
+.logo-text-1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: #e573c0 !important;
+    letter-spacing: -0.5px !important;
+    text-transform: none !important;
+}
+
+.logo-text-2 {
+    font-family: var(--font-heading);
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    color: #ff9800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;
+}
+
+.logo-text-3 {
+    font-family: monospace;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    background: #111;
+    color: #fff !important;
+    padding: 6px 12px;
+    border-radius: 4px;
+    letter-spacing: 2px !important;
+}
+
+.logo-text-4 {
+    font-family: Arial, sans-serif;
+    font-size: 26px !important;
+    font-weight: 900 !important;
+    color: #3b82f6 !important;
+    text-transform: lowercase !important;
+    font-variant: small-caps;
 }
 
 .ticker-item span {
