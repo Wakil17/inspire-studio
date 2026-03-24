@@ -958,9 +958,10 @@ ul {
 
 .ticker-track {
     display: flex;
-    gap: 15vw;
-    padding-right: 15vw;
-    animation: ticker 50s linear infinite;
+    align-items: center;
+    gap: 10vw;
+    padding-right: 10vw;
+    animation: ticker 45s linear infinite;
     width: max-content;
 }
 
@@ -999,7 +1000,9 @@ ul {
 }
 
 .ticker-item img.logo-xl {
-    transform: scale(2.2);
+    height: 90px;
+    max-height: 90px;
+    transform: none;
 }
 
 @keyframes ticker {
