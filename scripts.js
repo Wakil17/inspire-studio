@@ -126,38 +126,49 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tabs.length > 0 && partnerCards.length > 0) {
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
+                // Skip if already active
+                if (tab.classList.contains('active')) return;
+
                 // Update active tab
                 tabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
 
                 const filter = tab.dataset.filter;
 
-                // Fade out all cards first
+                // Fade out all visible cards
                 partnerCards.forEach(card => {
-                    card.classList.add('card-fade-out');
-                    card.classList.remove('card-fade-in');
+                    if (!card.classList.contains('card-hidden')) {
+                        card.classList.add('card-fade-out');
+                    }
                 });
 
-                // After fade-out, hide non-matching cards and show matching
+                // After fade-out completes, swap visibility
                 setTimeout(() => {
-                    partnerCards.forEach((card, index) => {
+                    let visibleIndex = 0;
+
+                    partnerCards.forEach(card => {
                         const category = card.dataset.category;
                         const shouldShow = filter === 'all' || category === filter;
 
-                        if (shouldShow) {
-                            card.classList.remove('card-hidden', 'card-fade-out');
-                            card.classList.add('visible'); // Ensure reveal is active
+                        // Reset all animation classes
+                        card.classList.remove('card-fade-out', 'card-fade-in');
 
-                            // Staggered fade-in
+                        if (shouldShow) {
+                            card.classList.remove('card-hidden');
+                            card.classList.add('visible');
+
+                            // Stagger only visible cards
+                            const delay = visibleIndex * 80;
+                            visibleIndex++;
+
                             setTimeout(() => {
                                 card.classList.add('card-fade-in');
-                            }, index * 60);
+                            }, delay);
                         } else {
                             card.classList.add('card-hidden');
-                            card.classList.remove('card-fade-out', 'card-fade-in');
                         }
                     });
-                }, 250);
+                }, 300);
             });
         });
     }
