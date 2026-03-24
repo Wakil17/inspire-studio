@@ -182,9 +182,18 @@
                 <p class="section-subtitle">Découvrez les structures, professeurs et écoles qui animent Inspire Studio
                     chaque semaine.</p>
             </div>
-            <div class="partners-grid">
 
-                <article class="partner-card reveal" data-discipline="Yoga · Pilates · Bien-être">
+            <!-- Category Tabs -->
+            <div class="partners-tabs reveal" id="partners-tabs">
+                <button class="partners-tab active" data-filter="all">Tout</button>
+                <button class="partners-tab" data-filter="yoga">Yoga · Pilates · Bien-être</button>
+                <button class="partners-tab" data-filter="danse">Danse · Chorégraphie</button>
+                <button class="partners-tab" data-filter="theatre">Théâtre · Comédie musicale</button>
+            </div>
+
+            <div class="partners-grid" id="partners-grid">
+
+                <article class="partner-card reveal" data-category="yoga" data-discipline="Yoga · Pilates · Bien-être">
                     <div class="partner-image" style="background: linear-gradient(135deg, #f8e8f3, #e8d5f0);">
                         <span class="partner-initial">Y</span>
                     </div>
@@ -197,33 +206,7 @@
                     </div>
                 </article>
 
-                <article class="partner-card reveal" data-discipline="Danse Swing">
-                    <div class="partner-image" style="background: linear-gradient(135deg, #e8f0f8, #d5e0f0);">
-                        <span class="partner-initial">JF</span>
-                    </div>
-                    <div class="partner-content">
-                        <span class="partner-discipline">Danse Swing</span>
-                        <h3 class="partner-name">JAZZY FEET</h3>
-                        <p class="partner-desc">École de danses swing à Paris créée par 4 danseurs souhaitant partager
-                            leur passion pour le Lindy Hop et le Solo Jazz.</p>
-                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
-                    </div>
-                </article>
-
-                <article class="partner-card reveal" data-discipline="Bollywood">
-                    <div class="partner-image" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
-                        <span class="partner-initial">T</span>
-                    </div>
-                    <div class="partner-content">
-                        <span class="partner-discipline">Bollywood</span>
-                        <h3 class="partner-name">TUSHAR</h3>
-                        <p class="partner-desc">Chorégraphe Bollywood France, directeur artistique, fondateur et
-                            créateur de spectacles vibrants.</p>
-                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
-                    </div>
-                </article>
-
-                <article class="partner-card reveal" data-discipline="Yoga · Bien-être">
+                <article class="partner-card reveal" data-category="yoga" data-discipline="Yoga · Bien-être">
                     <div class="partner-image" style="background: linear-gradient(135deg, #e0f2e9, #c8e6c9);">
                         <span class="partner-initial">OB</span>
                     </div>
@@ -236,46 +219,20 @@
                     </div>
                 </article>
 
-                <article class="partner-card reveal" data-discipline="Danse Jazz">
-                    <div class="partner-image" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">
-                        <span class="partner-initial">JB</span>
+                <article class="partner-card reveal" data-category="yoga" data-discipline="Yoga · Art">
+                    <div class="partner-image" style="background: linear-gradient(135deg, #fbe9e7, #ffccbc);">
+                        <span class="partner-initial">P</span>
                     </div>
                     <div class="partner-content">
-                        <span class="partner-discipline">Danse Jazz</span>
-                        <h3 class="partner-name">JAZZ BOX</h3>
-                        <p class="partner-desc">Cours de danse jazz deux soirs par semaine ouverts à tous les niveaux,
-                            dans une ambiance conviviale.</p>
+                        <span class="partner-discipline">Yoga · Univers artistique</span>
+                        <h3 class="partner-name">POONAM</h3>
+                        <p class="partner-desc">Artiste autodidacte et danseuse d'origine indienne vivant à Paris depuis
+                            14 ans, entre yoga et création.</p>
                         <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
                     </div>
                 </article>
 
-                <article class="partner-card reveal" data-discipline="Comédie musicale">
-                    <div class="partner-image" style="background: linear-gradient(135deg, #e8eaf6, #c5cae9);">
-                        <span class="partner-initial">DC</span>
-                    </div>
-                    <div class="partner-content">
-                        <span class="partner-discipline">Comédie musicale</span>
-                        <h3 class="partner-name">DUSTRY CIE</h3>
-                        <p class="partner-desc">Collectif dédié à la création de comédies musicales originales, actif
-                            depuis 2023.</p>
-                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
-                    </div>
-                </article>
-
-                <article class="partner-card reveal" data-discipline="Formation Danse">
-                    <div class="partner-image" style="background: linear-gradient(135deg, #fff9c4, #fff176);">
-                        <span class="partner-initial">PDS</span>
-                    </div>
-                    <div class="partner-content">
-                        <span class="partner-discipline">Formation Danse</span>
-                        <h3 class="partner-name">PARIS DANCE SCHOOL</h3>
-                        <p class="partner-desc">Formation professionnelle certifiante pour celles et ceux qui veulent
-                            faire de la danse leur métier.</p>
-                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
-                    </div>
-                </article>
-
-                <article class="partner-card reveal" data-discipline="Pilates">
+                <article class="partner-card reveal" data-category="yoga" data-discipline="Pilates">
                     <div class="partner-image" style="background: linear-gradient(135deg, #f3e5f5, #e1bee7);">
                         <span class="partner-initial">FW</span>
                     </div>
@@ -288,7 +245,72 @@
                     </div>
                 </article>
 
-                <article class="partner-card reveal" data-discipline="Comédie musicale">
+                <article class="partner-card reveal" data-category="danse" data-discipline="Danse Swing">
+                    <div class="partner-image" style="background: linear-gradient(135deg, #e8f0f8, #d5e0f0);">
+                        <span class="partner-initial">JF</span>
+                    </div>
+                    <div class="partner-content">
+                        <span class="partner-discipline">Danse Swing</span>
+                        <h3 class="partner-name">JAZZY FEET</h3>
+                        <p class="partner-desc">École de danses swing à Paris créée par 4 danseurs souhaitant partager
+                            leur passion pour le Lindy Hop et le Solo Jazz.</p>
+                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
+                    </div>
+                </article>
+
+                <article class="partner-card reveal" data-category="danse" data-discipline="Danse Jazz">
+                    <div class="partner-image" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">
+                        <span class="partner-initial">JB</span>
+                    </div>
+                    <div class="partner-content">
+                        <span class="partner-discipline">Danse Jazz</span>
+                        <h3 class="partner-name">JAZZ BOX</h3>
+                        <p class="partner-desc">Cours de danse jazz deux soirs par semaine ouverts à tous les niveaux,
+                            dans une ambiance conviviale.</p>
+                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
+                    </div>
+                </article>
+
+                <article class="partner-card reveal" data-category="danse" data-discipline="Bollywood">
+                    <div class="partner-image" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
+                        <span class="partner-initial">T</span>
+                    </div>
+                    <div class="partner-content">
+                        <span class="partner-discipline">Bollywood</span>
+                        <h3 class="partner-name">TUSHAR</h3>
+                        <p class="partner-desc">Chorégraphe Bollywood France, directeur artistique, fondateur et
+                            créateur de spectacles vibrants.</p>
+                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
+                    </div>
+                </article>
+
+                <article class="partner-card reveal" data-category="danse" data-discipline="Formation Danse">
+                    <div class="partner-image" style="background: linear-gradient(135deg, #fff9c4, #fff176);">
+                        <span class="partner-initial">PDS</span>
+                    </div>
+                    <div class="partner-content">
+                        <span class="partner-discipline">Formation Danse</span>
+                        <h3 class="partner-name">PARIS DANCE SCHOOL</h3>
+                        <p class="partner-desc">Formation professionnelle certifiante pour celles et ceux qui veulent
+                            faire de la danse leur métier.</p>
+                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
+                    </div>
+                </article>
+
+                <article class="partner-card reveal" data-category="theatre" data-discipline="Comédie musicale">
+                    <div class="partner-image" style="background: linear-gradient(135deg, #e8eaf6, #c5cae9);">
+                        <span class="partner-initial">DC</span>
+                    </div>
+                    <div class="partner-content">
+                        <span class="partner-discipline">Comédie musicale</span>
+                        <h3 class="partner-name">DUSTRY CIE</h3>
+                        <p class="partner-desc">Collectif dédié à la création de comédies musicales originales, actif
+                            depuis 2023.</p>
+                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
+                    </div>
+                </article>
+
+                <article class="partner-card reveal" data-category="theatre" data-discipline="Comédie musicale">
                     <div class="partner-image" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2);">
                         <span class="partner-initial">IL</span>
                     </div>
@@ -297,19 +319,6 @@
                         <h3 class="partner-name">IMPRO LA LA</h3>
                         <p class="partner-desc">Ateliers de comédie musicale improvisée en famille : adultes et enfants
                             en équipe, pour un moment unique.</p>
-                        <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
-                    </div>
-                </article>
-
-                <article class="partner-card reveal" data-discipline="Yoga · Art">
-                    <div class="partner-image" style="background: linear-gradient(135deg, #fbe9e7, #ffccbc);">
-                        <span class="partner-initial">P</span>
-                    </div>
-                    <div class="partner-content">
-                        <span class="partner-discipline">Yoga · Univers artistique</span>
-                        <h3 class="partner-name">POONAM</h3>
-                        <p class="partner-desc">Artiste autodidacte et danseuse d'origine indienne vivant à Paris depuis
-                            14 ans, entre yoga et création.</p>
                         <a href="#" class="partner-link">En savoir plus <span class="arrow">→</span></a>
                     </div>
                 </article>

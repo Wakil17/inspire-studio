@@ -118,4 +118,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
+
+    // --- Partners Category Tabs ---
+    const tabs = document.querySelectorAll('.partners-tab');
+    const partnerCards = document.querySelectorAll('.partner-card');
+
+    if (tabs.length > 0 && partnerCards.length > 0) {
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+
+                // Fade out all cards first
+                partnerCards.forEach(card => {
+                    card.classList.add('card-fade-out');
+                    card.classList.remove('card-fade-in');
+                });
+
+                // After fade-out, hide non-matching cards and show matching
+                setTimeout(() => {
+                    partnerCards.forEach((card, index) => {
+                        const category = card.dataset.category;
+                        const shouldShow = filter === 'all' || category === filter;
+
+                        if (shouldShow) {
+                            card.classList.remove('card-hidden', 'card-fade-out');
+                            card.classList.add('visible'); // Ensure reveal is active
+
+                            // Staggered fade-in
+                            setTimeout(() => {
+                                card.classList.add('card-fade-in');
+                            }, index * 60);
+                        } else {
+                            card.classList.add('card-hidden');
+                            card.classList.remove('card-fade-out', 'card-fade-in');
+                        }
+                    });
+                }, 250);
+            });
+        });
+    }
+
 });
