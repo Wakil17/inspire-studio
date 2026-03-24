@@ -980,6 +980,21 @@ ul {
     color: var(--color-accent);
 }
 
+.ticker-item img {
+    height: 45px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity var(--transition-base), filter var(--transition-base);
+    filter: grayscale(100%);
+}
+
+.ticker-item:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
 @keyframes ticker {
     0% {
         transform: translateX(0);
