@@ -92,7 +92,7 @@
 
         
     
-    <section class="section" style="background: #fafaf9; padding: 60px 0 100px 0; position:relative; z-index:10; margin-top: -80px; border-radius: 40px 40px 0 0; box-shadow: 0 -15px 40px rgba(0,0,0,0.05);">
+    <section class="section" style="background: #fafaf9; padding: 60px 0 100px 0; position:relative; z-index:10; margin-top: -80px; border-radius: 0; box-shadow: 0 -4px 30px rgba(0,0,0,0.03);">
         
 <style>
 .salle-split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; max-width: 1200px; margin: 60px auto; padding: 0 20px; text-align: left; }
@@ -129,21 +129,35 @@
         </div>
     </section>
 
-<section class="main-slider-section" style="padding: 40px 20px 100px 20px; background:#fafaf9;">
-    <div style="max-width:1200px; margin:0 auto;">
-        <h3 style="font-size: 2rem; font-family:var(--font-heading); color:var(--color-text); margin-bottom: 24px; text-align:center;">Visite de la salle complète</h3>
-        <div class="main-slider" style="position:relative; width:100%; height: 60vh; max-height: 550px; min-height: 400px; border-radius:16px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.1);">
-           <img id="main-slider-img" src="salle1/salle-vide-vue-large-fenetres-et-poutre.jpeg" style="width:100%; height:100%; object-fit:cover; display:block; transition: opacity 0.3s ease;">
-           
-           <button onclick="prevMain()" style="position:absolute; left:24px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.9); border:none; width:56px; height:56px; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); font-size:24px; color:#333; transition:background 0.2s;">❮</button>
-           <button onclick="nextMain()" style="position:absolute; right:24px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.9); border:none; width:56px; height:56px; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); font-size:24px; color:#333; transition:background 0.2s;">❯</button>
-           
-           <div style="position:absolute; bottom:24px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.7); color:#fff; padding:8px 20px; border-radius:30px; font-weight:600; font-size:15px; letter-spacing:1px;">
-               <span id="main-slider-counter">1 / 14</span>
-           </div>
+
+<section class="main-slider-section" style="padding: 80px 0 0 0; background:#fff;">
+    <div style="max-width:1200px; margin:0 auto; padding:0 20px;">
+        <span style="display:block; text-align:center; color:var(--color-primary); font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">Galerie</span>
+        <h3 style="font-size: 2.5rem; font-family:var(--font-heading); color:var(--color-text); margin-bottom: 40px; text-align:center;">Visite de la salle complète</h3>
+    </div>
+    <div class="main-slider" style="position:relative; width:100%; height: 65vh; max-height: 600px; min-height: 400px; overflow:hidden; background:#fafaf9;">
+       <img id="main-slider-img" src="salle1/salle-vide-vue-large-fenetres-et-poutre.jpeg" style="width:100%; height:100%; object-fit:cover; display:block; transition: opacity 0.4s ease;">
+       
+       <button onclick="prevMain()" style="position:absolute; left:0; top:0; bottom:0; width:15%; background:linear-gradient(to right, rgba(0,0,0,0.2), transparent); border:none; cursor:pointer; color:#fff; font-size:32px; transition:opacity 0.3s; opacity:0; display:flex; align-items:center; padding-left:40px;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">❮</button>
+       <button onclick="nextMain()" style="position:absolute; right:0; top:0; bottom:0; width:15%; background:linear-gradient(to left, rgba(0,0,0,0.2), transparent); border:none; cursor:pointer; color:#fff; font-size:32px; transition:opacity 0.3s; opacity:0; display:flex; align-items:center; justify-content:flex-end; padding-right:40px;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">❯</button>
+       
+       <div style="position:absolute; bottom:30px; left:50%; transform:translateX(-50%); color:#fff; font-weight:500; font-size:14px; letter-spacing:2px; text-transform:uppercase; text-shadow:0 2px 4px rgba(0,0,0,0.5);">
+           <span id="main-slider-counter">1 / 14</span>
+       </div>
+    </div>
+</section>
+
+<section class="final-cta" style="background:#fff; padding: 100px 20px; text-align:center; border-bottom: 1px solid #eee;">
+    <div style="max-width: 600px; margin:0 auto;">
+        <h2 style="font-family:var(--font-heading); font-size:2.5rem; margin-bottom:24px; color:var(--color-text);">L'espace idéal pour vos sessions</h2>
+        <p style="color:var(--color-text-light); margin-bottom:40px; font-size:18px; line-height:1.6;">Que ce soit pour une pratique régulière ou un événement ponctuel, la Salle 1 vous offre un cadre inspirant et baigné de lumière.</p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+            <a href="index.html#contact" class="btn btn-primary" style="padding:16px 32px; font-size:16px;">Vérifier les disponibilités</a>
+            <a href="salles.html" class="btn btn-outline" style="padding:16px 32px; font-size:16px;">Voir les autres salles</a>
         </div>
     </div>
 </section>
+
 
 
 </section>
