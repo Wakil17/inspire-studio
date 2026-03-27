@@ -1416,16 +1416,7 @@ body.nav-open {
 /* ========================================
    SALLES PAGE STYLES
    ======================================== */
-.hero-salles {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-}
+.hero-salles { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
 
 .hero-salles-bg {
     position: absolute;
