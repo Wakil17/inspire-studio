@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspire Studio — Location de Salles à Paris | Danse, Yoga, Bien-être</title>
+    <meta name="description"
+        content="Inspire Studio : location de salles à Paris pour la danse, le yoga, le bien-être et les pratiques artistiques. Espaces lumineux et inspirants au cœur d'Oberkampf.">
+    <meta name="keywords"
+        content="location salle Paris, studio danse Paris, salle yoga Paris, Oberkampf, bien-être, pratiques artistiques">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="#" class="logo" aria-label="Inspire Studio — Accueil">
+                <span class="logo-text">INSPIRE</span>
+                <span class="logo-accent">STUDIO</span>
+            </a>
+            <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Accueil</a></li>
+                    <li><a href="#" class="nav-link">Nos salles</a></li>
+                    <li><a href="#" class="nav-link">Inspire Studio</a></li>
+                    <li><a href="#" class="nav-link">Tarifs</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="nav-link nav-cta">Réserver</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Ouvrir le menu"
+                aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero-salles reveal">
+            <div class="hero-salles-bg" style="background-image: url('photos%20salles/photo1.jpg');"></div>
+            <div class="hero-salles-overlay"></div>
+            <div class="hero-salles-content">
+                <p class="hero-subtitle" style="text-transform:uppercase; letter-spacing:2px; font-weight:600; color:#fff;">Trouvez la salle qui vous INSPIRE</p>
+                <h1 style="font-size: 5rem; margin-top:24px; color:#fff;">NOS SALLES</h1>
+            </div>
+        </section>
+
+        <!-- Salles Directory Section -->
+        <section class="section salles-directory" id="salles-directory" style="background:var(--color-bg);">
+            <div class="container salles-layout">
+                
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar reveal">
+                    <h3 class="filter-heading">Filters</h3>
+
+                    <div class="filter-group">
+                        <label for="localisation">LOCALISATION</label>
+                        <select id="localisation" name="localisation" class="filter-input">
+                            <option value="">Inspire studio à Paris 11 et 14</option>
+                            <option value="11">Paris 11 (Rue Oberkampf)</option>
+                            <option value="14">Paris 14 (Rue d'Alésia)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group row-group">
+                        <div class="input-half">
+                            <label for="min-area">MIN. m²</label>
+                            <input type="number" id="min-area" class="filter-input" placeholder="0">
+                        </div>
+                        <div class="input-half">
+                            <label for="max-area">MAX. m²</label>
+                            <input type="number" id="max-area" class="filter-input" placeholder="100">
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button class="btn btn-primary btn-search-salles">Recherche</button>
+                        <button class="btn btn-outline btn-clear-salles">Effacer</button>
+                    </div>
+                </aside>
+
+                <!-- Room Grid -->
+                <div class="room-grid">
+                    <!-- Salle 1 -->
+                    <article class="room-card reveal">
+                        <div class="room-header">
+                            <span class="room-logo" style="font-weight:bold; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--color-text-light);">Logotype inspire studio</span>
+                            <span class="room-area">60 m2</span>
+                        </div>
+                        <h3 class="room-title">Salle 1</h3>
+                        <p class="room-address">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details">
+                            <div class="detail-item">
+                                <span class="detail-label">MAX. Pers.</span>
+                                <span class="detail-val">22</span>
+                            </div>
+                            <div class="detail-price">
+                                <span class="price-label">à partir de</span>
+                                <span class="price-val">20 € ht / h</span>
+                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            </div>
+                        </div>
+                        <div class="room-footer">
+                            <a href="salle1.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Salle 4 -->
+                    <article class="room-card reveal">
+                        <div class="room-header">
+                            <span class="room-logo" style="font-weight:bold; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--color-text-light);">Logotype inspire studio</span>
+                            <span class="room-area">40 m2</span>
+                        </div>
+                        <h3 class="room-title">Salle 4</h3>
+                        <p class="room-address">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details">
+                            <div class="detail-item">
+                                <span class="detail-label">MAX. Pers.</span>
+                                <span class="detail-val">12</span>
+                            </div>
+                            <div class="detail-price">
+                                <span class="price-label">à partir de</span>
+                                <span class="price-val">14 € ht / h</span>
+                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            </div>
+                        </div>
+                        <div class="room-footer">
+                            <a href="salle4.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                        </div>
+                    </article>
+
+                    <!-- Salle 2 -->
+                    <article class="room-card reveal">
+                        <div class="room-header">
+                            <span class="room-logo" style="font-weight:bold; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--color-text-light);">Logotype inspire studio</span>
+                            <span class="room-area">60 m2</span>
+                        </div>
+                        <h3 class="room-title">Salle 2</h3>
+                        <p class="room-address">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details">
+                            <div class="detail-item">
+                                <span class="detail-label">MAX. Pers.</span>
+                                <span class="detail-val">22</span>
+                            </div>
+                            <div class="detail-price">
+                                <span class="price-label">à partir de</span>
+                                <span class="price-val">20 € ht / h</span>
+                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            </div>
+                        </div>
+                        <div class="room-footer">
+                            <a href="salle2.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                        </div>
+                    </article>
+
+                    <!-- Salle 5 -->
+                    <article class="room-card reveal">
+                        <div class="room-header">
+                            <span class="room-logo" style="font-weight:bold; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--color-text-light);">Logotype inspire studio</span>
+                            <span class="room-area">55 m2</span>
+                        </div>
+                        <h3 class="room-title">Salle 5</h3>
+                        <p class="room-address">31, Rue d'Alésia, 75014</p>
+                        <div class="room-details">
+                            <div class="detail-item">
+                                <span class="detail-label">MAX. Pers.</span>
+                                <span class="detail-val">17</span>
+                            </div>
+                            <div class="detail-price">
+                                <span class="price-label">à partir de</span>
+                                <span class="price-val">19 € ht / h</span>
+                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            </div>
+                        </div>
+                        <div class="room-footer">
+                            <a href="salle5.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                        </div>
+                    </article>
+
+                    <!-- Salle 3 -->
+                    <article class="room-card reveal">
+                        <div class="room-header">
+                            <span class="room-logo" style="font-weight:bold; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--color-text-light);">Logotype inspire studio</span>
+                            <span class="room-area">75 m2</span>
+                        </div>
+                        <h3 class="room-title">Salle 3</h3>
+                        <p class="room-address">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details">
+                            <div class="detail-item">
+                                <span class="detail-label">MAX. Pers.</span>
+                                <span class="detail-val">30</span>
+                            </div>
+                            <div class="detail-price">
+                                <span class="price-label">à partir de</span>
+                                <span class="price-val">40 € ht / h</span>
+                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            </div>
+                        </div>
+                        <div class="room-footer">
+                            <a href="salle3.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                        </div>
+                    </article>
+
+                    <!-- Salle 6 -->
+                    <article class="room-card reveal">
+                        <div class="room-header">
+                            <span class="room-logo" style="font-weight:bold; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--color-text-light);">Logotype inspire studio</span>
+                            <span class="room-area">25 m2</span>
+                        </div>
+                        <h3 class="room-title">Salle 6</h3>
+                        <p class="room-address">31, Rue d'Alésia, 75014</p>
+                        <div class="room-details">
+                            <div class="detail-item">
+                                <span class="detail-label">MAX. Pers.</span>
+                                <span class="detail-val">4</span>
+                            </div>
+                            <div class="detail-price">
+                                <span class="price-label">à partir de</span>
+                                <span class="price-val">15 € ht / h</span>
+                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            </div>
+                        </div>
+                        <div class="room-footer">
+                            <a href="salle6.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+<footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">INSPIRE</span>
+                        <span class="logo-accent">STUDIO</span>
+                    </div>
+                    <p class="footer-tagline">Location de salles à Paris pour la danse, le yoga et les pratiques
+                        artistiques.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Nos salles</a></li>
+                        <li><a href="#">Tarifs</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Réserver</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            160 rue Oberkampf, 75011 Paris
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <a href="mailto:inspire.studio.paris@gmail.com">inspire.studio.paris@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                            </svg>
+                            <a href="tel:+33759811108">+33 7 59 81 11 08</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            7j/7 — de 8h à 23h
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Inspire Studio — Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
