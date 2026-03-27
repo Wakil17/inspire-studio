@@ -69,38 +69,40 @@
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="hero hero-salles reveal">
-            <div class="hero-salles-bg" style="background-image: url('photos%20salles/photo1.jpg');"></div>
+        <section class="hero hero-salles reveal" style="height: 85vh !important; min-height: 600px !important; display:flex; align-items:center; justify-content:center; position:relative;">
+            <div class="hero-salles-bg" style="background-image: url('photos%20salles/photo2.jpg'); background-position: center; background-size: cover; filter: brightness(0.9) contrast(1.05);"></div>
             <div class="hero-salles-overlay"></div>
-            <div class="hero-salles-content">
-                <p class="hero-subtitle" style="text-transform:uppercase; letter-spacing:2px; font-weight:600; color:#fff;">Trouvez la salle qui vous INSPIRE</p>
-                <h1 style="font-size: 5rem; margin-top:24px; color:#fff;">NOS SALLES</h1>
+            <div class="hero-salles-content" style="text-align:center;">
+                <p class="hero-subtitle" style="text-transform:uppercase; letter-spacing:4px; font-weight:700; color:#444; font-size:14px;">Trouvez la salle qui vous inspire</p>
+                <h1 class="hero-title" style="font-size: 5.5rem; margin-top:10px; font-family:var(--font-heading); color:#222; font-weight:400;">
+                    NOS <span style="color:#e83e8c !important; font-style:italic !important; font-family: 'Playfair Display', serif !important;">SALLES</span>
+                </h1>
+            </div>
+            
+            <div class="search-pill-container" style="display:flex; justify-content:center; position:absolute; bottom:40px; left:50%; transform:translateX(-50%); z-index:100; width:90%; max-width:950px; margin:0;">
+                <div class="search-pill" style="display:flex; align-items:center; justify-content:space-between; background:#fff; border-radius:12px; box-shadow:0 15px 50px rgba(0,0,0,0.1); padding:12px 24px; flex-wrap:wrap; width:100%;">
+                    <div class="search-pill-group" style="padding-right:24px; border-right:1px solid #eee;">
+                        <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Localisation</div>
+                        <select id="filter-loc" style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; background:transparent; width:100%;"><option>Paris 11 & 14</option><option>Oberkampf (11e)</option><option>Alésia (14e)</option></select>
+                    </div>
+                    <div class="search-pill-group" style="padding:0 24px; border-right:1px solid #eee;">
+                        <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Surface</div>
+                        <input id="filter-surface" type="number" placeholder="Min. m²" style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; width:80px; background:transparent;">
+                    </div>
+                    <div class="search-pill-group" style="padding:0 24px; border-right:1px solid #eee;">
+                        <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Participants</div>
+                        <input id="filter-cap" type="number" placeholder="Capacité max." style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; width:120px; background:transparent;">
+                    </div>
+                    <button id="btn-search" style="background:#e83e8c; color:#fff; border:none;border-radius:50%; width:48px; height:48px; margin-left:16px; cursor:pointer;" aria-label="Rechercher">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin:auto;"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                </div>
             </div>
         </section>
 
         <!-- Salles Directory Section -->
-        <section class="section salles-directory" id="salles-directory" style="background:var(--color-bg);">
+        <section class="section salles-directory" id="salles-directory" style="background:var(--color-bg); padding-top:80px;">
             <div class="container" style="max-width: 1200px; margin:auto;">
-
-<div class="search-pill-container" style="display:flex; justify-content:center; position:relative; z-index:100; margin-top:-40px; margin-bottom:40px;">
-    <div class="search-pill" style="display:flex; align-items:center; justify-content:space-between; background:#fff; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.1); padding:12px 24px; flex-wrap:wrap; width:100%; max-width:900px; margin:-40px auto 40px auto;">
-        <div class="search-pill-group" style="padding-right:24px; border-right:1px solid #eee;">
-            <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Localisation</div>
-            <select style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; background:transparent;"><option>Paris 11 & 14</option><option>Oberkampf (11e)</option><option>Alésia (14e)</option></select>
-        </div>
-        <div class="search-pill-group" style="padding:0 24px; border-right:1px solid #eee;">
-            <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Surface</div>
-            <input type="text" placeholder="Min. m²" style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; width:80px; background:transparent;">
-        </div>
-        <div class="search-pill-group" style="padding:0 24px; border-right:1px solid #eee;">
-            <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Participants</div>
-            <input type="number" placeholder="Capacité max." style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; width:120px; background:transparent;">
-        </div>
-        <button style="background:#e83e8c; color:#fff; border:none;border-radius:50%; width:48px; height:48px; margin-left:16px; cursor:pointer;" aria-label="Rechercher">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin:auto;"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        </button>
-    </div>
-</div>
 
 <div class="room-grid">
 
@@ -351,7 +353,73 @@ let csIdx_1 = 0;
 function prevCS(e, id) { e.preventDefault(); e.stopPropagation(); csIdx_1 = (csIdx_1 - 1 + 4) % 4; document.getElementById('cs-img-'+id).src = csPhotos_1[csIdx_1]; }
 function nextCS(e, id) { e.preventDefault(); e.stopPropagation(); csIdx_1 = (csIdx_1 + 1) % 4; document.getElementById('cs-img-'+id).src = csPhotos_1[csIdx_1]; }
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btnSearch = document.getElementById('btn-search');
+    if(btnSearch) {
+        btnSearch.addEventListener('click', function(e) {
+            e.preventDefault();
+            const locFilter = document.getElementById('filter-loc').value || '';
+            const surfaceFilter = parseInt(document.getElementById('filter-surface').value) || 0;
+            const capFilter = parseInt(document.getElementById('filter-cap').value) || 0;
+            
+            const cards = document.querySelectorAll('.room-card');
+            let visibleCount = 0;
+            
+            // Highlight the button briefly
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => this.style.transform = 'scale(1)', 150);
+            
+            cards.forEach(card => {
+                const address = card.querySelector('.room-address').textContent.toLowerCase();
+                let locMatch = true;
+                if (locFilter.includes('Oberkampf') && !address.includes('oberkampf')) locMatch = false;
+                if (locFilter.includes('Alésia') && !address.includes('alésia')) locMatch = false;
+                
+                const area = parseInt(card.querySelector('.room-area').textContent) || 0;
+                let areaMatch = area >= surfaceFilter;
+                
+                const cap = parseInt(card.querySelector('.detail-val').textContent) || 0;
+                let capMatch = cap >= capFilter;
+                
+                if (locMatch && areaMatch && capMatch) {
+                    card.style.display = 'flex';
+                    // Trigger a small reflow animation
+                    card.style.animation = 'none';
+                    card.offsetHeight; /* trigger reflow */
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            let nores = document.getElementById('no-results-msg');
+            if (visibleCount === 0) {
+                if (!nores) {
+                    nores = document.createElement('div');
+                    nores.id = 'no-results-msg';
+                    nores.innerHTML = '<h4 style="font-size:20px; font-family:var(--font-heading); margin-bottom:10px;">Aucune salle trouvée</h4><p style="color:#666;">Essayez de modifier vos critères de recherche.</p>';
+                    nores.style.textAlign = 'center';
+                    nores.style.width = '100%';
+                    nores.style.padding = '60px 20px';
+                    nores.style.gridColumn = '1 / -1';
+                    document.querySelector('.room-grid').appendChild(nores);
+                }
+                nores.style.display = 'block';
+            } else if (nores) {
+                nores.style.display = 'none';
+            }
+            
+            // Smooth scroll to the grid
+            document.getElementById('salles-directory').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+});
+</script>
 </body>
+
 
 
 </html>
