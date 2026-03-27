@@ -106,14 +106,17 @@
 
                     <article class="room-card reveal" style="padding: 24px; display:flex; flex-direction:column;">
                         
-<div style="position:relative; margin-bottom:24px;">
-    <div class="card-gallery">
-        <img src="salle1/grande-salle-vide-vue-ensemble-lumineuse.jpeg" alt="Salle 1 - Vue 1">
-        <img src="salle1/salle-vide-vue-centrale-fenetres-et-lumiere-sol.jpeg" alt="Salle 1 - Vue 2">
-        <img src="salle1/grande-salle-vide-vue-fenetres-centrales.jpeg" alt="Salle 1 - Vue 3">
-    </div>
-    <div class="scroll-hint">➔ Glisser</div>
+
+<div class="card-slider" style="position:relative; width:100%; height:200px; border-radius:12px; overflow:hidden; margin-bottom:24px;" onmouseover="this.querySelector('.cs-nav').style.opacity='1'" onmouseout="this.querySelector('.cs-nav').style.opacity='0'">
+   <a href="salle1.html" style="display:block; width:100%; height:100%;">
+       <img id="cs-img-1" src="salle1/salle-vide-vue-large-fenetres-et-poutre.jpeg" style="width:100%; height:100%; object-fit:cover; transition: opacity 0.3s ease;">
+   </a>
+   <div class="cs-nav" style="opacity:0; transition:opacity 0.2s;">
+      <button onclick="prevCS(event, 1)" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); background:#fff; border:none; width:32px; height:32px; border-radius:50%; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.2); font-size:14px; color:#333; z-index:10;">❮</button>
+      <button onclick="nextCS(event, 1)" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); background:#fff; border:none; width:32px; height:32px; border-radius:50%; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.2); font-size:14px; color:#333; z-index:10;">❯</button>
+   </div>
 </div>
+
                         <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
                             <h3 class="room-title" style="margin-bottom:0; font-family:var(--font-heading); font-size:24px;">Salle 1</h3>
 
@@ -336,6 +339,19 @@
     </footer>
 
     <script src="scripts.js"></script>
+
+<script>
+const csPhotos_1 = [
+  "salle1/salle-vide-vue-large-fenetres-et-poutre.jpeg",
+  "salle1/grande-salle-vide-vue-ensemble-lumineuse.jpeg",
+  "salle1/salle-vide-vue-large-angle-porte-fond.jpeg",
+  "salle1/salle-vide-vue-oblique-fenetres-et-sol.jpeg"
+];
+let csIdx_1 = 0;
+function prevCS(e, id) { e.preventDefault(); e.stopPropagation(); csIdx_1 = (csIdx_1 - 1 + 4) % 4; document.getElementById('cs-img-'+id).src = csPhotos_1[csIdx_1]; }
+function nextCS(e, id) { e.preventDefault(); e.stopPropagation(); csIdx_1 = (csIdx_1 + 1) % 4; document.getElementById('cs-img-'+id).src = csPhotos_1[csIdx_1]; }
+</script>
 </body>
+
 
 </html>

@@ -88,31 +88,7 @@
         
     </section>
     
-    <section class="salle-gallery-section" id="galerie">
-        <div class="gallery-header">
-            <h3>Galerie Photo</h3>
-            <p>Découvrez la Salle 1 sous tous ses angles.</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item item-large"><img src="salle1/grande-salle-vide-vue-fenetres-centrales.jpeg" loading="lazy" alt="Salle vue fenêtre centrale"></div>
-            <div class="gallery-item"><img src="salle1/salle-vide-vue-centrale-fenetres-et-lumiere-sol.jpeg" loading="lazy" alt="Lumière au sol"></div>
-            <div class="gallery-item item-wide"><img src="salle1/grande-salle-vide-vue-fenetres-et-ombre-sol.jpeg" loading="lazy" alt="Ombres et lumières"></div>
-            
-            <div class="gallery-item"><img src="salle1/salle-vide-vue-large-fenetres-et-poutre.jpeg" loading="lazy" alt="Détail poutre"></div>
-            <div class="gallery-item"><img src="salle1/salle-vide-vue-oblique-fenetres-et-sol.jpeg" loading="lazy" alt="Vue oblique"></div>
-            
-            <div class="gallery-item item-wide"><img src="salle1/salle-vide-vue-large-angle-porte-fond.jpeg" loading="lazy" alt="Angle depuis la porte"></div>
-            <div class="gallery-item"><img src="salle1/salle-vide-vue-angle-bas-poutre-noire.jpeg" loading="lazy" alt="Vue contre-plongée"></div>
-            <div class="gallery-item"><img src="salle1/salle-vide-vue-angle-climatisation-droite.jpeg" loading="lazy" alt="Angle climatisation"></div>
-            
-            <div class="gallery-item"><img src="salle1/salle-vide-vue-fenetre-gauche-et-porte-fond.jpeg" loading="lazy" alt="Mur de gauche"></div>
-            <div class="gallery-item"><img src="salle1/salle-vide-vue-mur-fenetres-hautes.jpeg" loading="lazy" alt="Fenêtres hautes"></div>
-            
-            <div class="gallery-item"><img src="salle1/rangement-materiel-coin-salle.jpeg" loading="lazy" alt="Matériel rangement"></div>
-            <div class="gallery-item"><img src="salle1/rangement-materiel-salle-vue-face.jpeg" loading="lazy" alt="Équipement disponible"></div>
-            <div class="gallery-item"><img src="salle1/etagere-rangement-tapis-et-chaises.jpeg" loading="lazy" alt="Chaises et tapis"></div>
-        </div>
-    </section>
+    
 
         
     
@@ -152,6 +128,25 @@
             </div>
         </div>
     </section>
+
+<section class="main-slider-section" style="padding: 40px 20px 100px 20px; background:#fafaf9;">
+    <div style="max-width:1200px; margin:0 auto;">
+        <h3 style="font-size: 2rem; font-family:var(--font-heading); color:var(--color-text); margin-bottom: 24px; text-align:center;">Visite de la salle complète</h3>
+        <div class="main-slider" style="position:relative; width:100%; height:700px; border-radius:16px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.1);">
+           <img id="main-slider-img" src="salle1/salle-vide-vue-large-fenetres-et-poutre.jpeg" style="width:100%; height:100%; object-fit:cover; display:block; transition: opacity 0.3s ease;">
+           
+           <button onclick="prevMain()" style="position:absolute; left:24px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.9); border:none; width:56px; height:56px; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); font-size:24px; color:#333; transition:background 0.2s;">❮</button>
+           <button onclick="nextMain()" style="position:absolute; right:24px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.9); border:none; width:56px; height:56px; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); font-size:24px; color:#333; transition:background 0.2s;">❯</button>
+           
+           <div style="position:absolute; bottom:24px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.7); color:#fff; padding:8px 20px; border-radius:30px; font-weight:600; font-size:15px; letter-spacing:1px;">
+               <span id="main-slider-counter">1 / 14</span>
+           </div>
+        </div>
+    </div>
+</section>
+
+
+</section>
     
     
     </main>
@@ -221,6 +216,38 @@
     </footer>
 
     <script src="scripts.js"></script>
+
+<script>
+const photos = [
+  "salle1/salle-vide-vue-large-fenetres-et-poutre.jpeg",
+  "salle1/salle-vide-vue-large-angle-porte-fond.jpeg",
+  "salle1/grande-salle-vide-vue-ensemble-lumineuse.jpeg",
+  "salle1/grande-salle-vide-vue-fenetres-centrales.jpeg",
+  "salle1/grande-salle-vide-vue-fenetres-et-ombre-sol.jpeg",
+  "salle1/salle-vide-vue-centrale-fenetres-et-lumiere-sol.jpeg",
+  "salle1/salle-vide-vue-oblique-fenetres-et-sol.jpeg",
+  "salle1/salle-vide-vue-angle-bas-poutre-noire.jpeg",
+  "salle1/salle-vide-vue-angle-climatisation-droite.jpeg",
+  "salle1/salle-vide-vue-fenetre-gauche-et-porte-fond.jpeg",
+  "salle1/salle-vide-vue-mur-fenetres-hautes.jpeg",
+  "salle1/rangement-materiel-salle-vue-face.jpeg",
+  "salle1/rangement-materiel-coin-salle.jpeg",
+  "salle1/etagere-rangement-tapis-et-chaises.jpeg"
+];
+let mainIdx = 0;
+function updateMain() {
+  const img = document.getElementById('main-slider-img');
+  img.style.opacity = '0.5';
+  setTimeout(() => {
+    img.src = photos[mainIdx];
+    img.style.opacity = '1';
+  }, 150);
+  document.getElementById('main-slider-counter').textContent = (mainIdx+1) + " / " + photos.length;
+}
+function prevMain() { mainIdx = (mainIdx - 1 + photos.length) % photos.length; updateMain(); }
+function nextMain() { mainIdx = (mainIdx + 1) % photos.length; updateMain(); }
+</script>
 </body>
+
 
 </html>
