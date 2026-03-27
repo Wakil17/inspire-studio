@@ -39,43 +39,62 @@
 .scroll-hint { position:absolute; right:10px; bottom:10px; background:rgba(0,0,0,0.5); color:#fff; border-radius:30px; padding:4px 12px; font-size:10px; font-weight:700; pointer-events:none; }
 </style>
 
+
+
 <style>
-/* Mobile optimization for the Search Pill */
+/* Mobile optimization for the Search Pill v2 */
 @media (max-width: 768px) {
+    /* Push the massive vertical pill downwards outside the hero bounds */
     .search-pill-container {
-        bottom: -20px !important; /* Let it overlap down slightly */
-        width: 95% !important;
+        top: 100% !important;
+        bottom: auto !important;
+        margin-top: -30px !important; /* overlap just a tiny bit for the float effect */
+        width: 90% !important;
     }
+    
+    /* Pad the directory section below to accommodate the floating card */
+    .salles-directory {
+        padding-top: 320px !important;
+    }
+
     .search-pill { 
         flex-direction: column !important; 
         align-items: stretch !important; 
-        padding: 20px !important; 
+        padding: 24px !important; 
         border-radius: 16px !important;
     }
     .search-pill-group {
         border-right: none !important;
         border-bottom: 1px solid #eaeaea !important;
-        padding: 12px 0 !important;
+        padding: 16px 0 !important;
         width: 100% !important;
     }
     .search-pill-group:nth-last-of-type(2) {
         border-bottom: none !important;
         padding-bottom: 0 !important;
     }
-    .search-pill-group select, .search-pill-group input {
+    .search-pill-group select, 
+    .search-pill-group input {
         width: 100% !important;
-        margin-top: 8px;
+        margin-top: 6px;
+        font-size: 16px !important;
     }
+
+    /* Perfect flex alignment for the Search Button */
     #btn-search {
         width: 100% !important;
-        border-radius: 50px !important;
+        border-radius: 12px !important;
         margin-left: 0 !important;
-        margin-top: 20px !important;
-        height: 52px !important;
+        margin-top: 24px !important;
+        height: 56px !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 8px;
+        gap: 12px;
+    }
+    #btn-search svg {
+        margin: 0 !important; /* Remove margin:auto that destroyed flex layout */
+        flex-shrink: 0;
     }
     #btn-search::after {
         content: 'Rechercher';
