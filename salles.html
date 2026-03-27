@@ -38,7 +38,56 @@
 }
 .scroll-hint { position:absolute; right:10px; bottom:10px; background:rgba(0,0,0,0.5); color:#fff; border-radius:30px; padding:4px 12px; font-size:10px; font-weight:700; pointer-events:none; }
 </style>
+
+<style>
+/* Mobile optimization for the Search Pill */
+@media (max-width: 768px) {
+    .search-pill-container {
+        bottom: -20px !important; /* Let it overlap down slightly */
+        width: 95% !important;
+    }
+    .search-pill { 
+        flex-direction: column !important; 
+        align-items: stretch !important; 
+        padding: 20px !important; 
+        border-radius: 16px !important;
+    }
+    .search-pill-group {
+        border-right: none !important;
+        border-bottom: 1px solid #eaeaea !important;
+        padding: 12px 0 !important;
+        width: 100% !important;
+    }
+    .search-pill-group:nth-last-of-type(2) {
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+    }
+    .search-pill-group select, .search-pill-group input {
+        width: 100% !important;
+        margin-top: 8px;
+    }
+    #btn-search {
+        width: 100% !important;
+        border-radius: 50px !important;
+        margin-left: 0 !important;
+        margin-top: 20px !important;
+        height: 52px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px;
+    }
+    #btn-search::after {
+        content: 'Rechercher';
+        font-weight: 700;
+        font-family: var(--font-body);
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+}
+</style>
 </head>
+
 
 <body>
 
