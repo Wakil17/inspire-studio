@@ -1609,3 +1609,17 @@ body.nav-open {
     width: 100%;
     justify-content: center;
 }
+
+/* Fix Mobile Burger Menu White-on-White invisibility */
+@media (max-width: 1023px) {
+    .main-nav.open {
+        background: var(--color-bg) !important; /* Ensure solid white/bg color */
+        z-index: 999 !important;
+    }
+    .main-nav.open .nav-link {
+        color: var(--color-heading) !important; /* Force dark text for visibility */
+    }
+    .mobile-menu-toggle.active .hamburger-line {
+        background: var(--color-heading) !important; /* Force dark X icon so it is visible on white */
+    }
+}
