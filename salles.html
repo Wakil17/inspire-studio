@@ -22,13 +22,13 @@
     <!-- ==================== HEADER ==================== -->
     <header class="site-header" id="site-header">
         <div class="header-inner">
-            <a href="#" class="logo" aria-label="Inspire Studio — Accueil">
+            <a href="index.html" class="logo" aria-label="Inspire Studio — Accueil">
                 <span class="logo-text">INSPIRE</span>
                 <span class="logo-accent">STUDIO</span>
             </a>
             <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
                 <ul class="nav-list">
-                    <li><a href="#" class="nav-link active">Accueil</a></li>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="#" class="nav-link">Nos salles</a></li>
                     <li><a href="#" class="nav-link">Inspire Studio</a></li>
                     <li><a href="#" class="nav-link">Tarifs</a></li>
@@ -60,7 +60,7 @@
             <div class="container" style="max-width: 1200px; margin:auto;">
 
 <div class="search-pill-container" style="display:flex; justify-content:center; position:relative; z-index:100; margin-top:-40px; margin-bottom:40px;">
-    <div class="search-pill" style="display:flex; align-items:center; background:#fff; border-radius:50px; box-shadow:0 10px 40px rgba(0,0,0,0.1); padding:8px 8px 8px 32px; flex-wrap:wrap;">
+    <div class="search-pill" style="display:flex; align-items:center; justify-content:space-between; background:#fff; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.1); padding:12px 24px; flex-wrap:wrap; width:100%; max-width:900px; margin:-40px auto 40px auto;">
         <div class="search-pill-group" style="padding-right:24px; border-right:1px solid #eee;">
             <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Localisation</div>
             <select style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; background:transparent;"><option>Paris 11 & 14</option><option>Oberkampf (11e)</option><option>Alésia (14e)</option></select>
@@ -73,152 +73,170 @@
             <div style="font-size:11px; font-weight:700; color:#888; text-transform:uppercase; margin-bottom:4px;">Participants</div>
             <input type="number" placeholder="Capacité max." style="border:none; outline:none; font-weight:600; font-size:15px; color:#333; width:120px; background:transparent;">
         </div>
-        <button style="background:var(--color-primary); color:#fff; border:none;border-radius:50%; width:48px; height:48px; margin-left:16px; cursor:pointer;" aria-label="Rechercher">
+        <button style="background:#e83e8c; color:#fff; border:none;border-radius:50%; width:48px; height:48px; margin-left:16px; cursor:pointer;" aria-label="Rechercher">
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin:auto;"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </button>
     </div>
 </div>
 
 <div class="room-grid">
-                    <!-- Salle 1 -->
-                    <article class="room-card reveal">
-                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
-                            <h3 class="room-title" style="margin-bottom:0;">Salle 1</h3>
-                            <span class="room-area" style="font-size:14px;">60 m2</span>
+
+                    <article class="room-card reveal" style="padding: 24px; display:flex; flex-direction:column;">
+                        <div class="room-img" style="height: 200px; background-color: #f7f7f7; border-radius: 12px; margin-bottom: 24px; display:flex; align-items:center; justify-content:center; color:#adb5bd; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; border:2px dashed #e9ecef;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Insérer Photo
                         </div>
-                        <p class="room-address">160, Rue Oberkampf, 75011</p>
-                        <div class="room-details">
-                            <div class="detail-item">
-                                <span class="detail-label">MAX. Pers.</span>
-                                <span class="detail-val">22</span>
+                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
+                            <h3 class="room-title" style="margin-bottom:0; font-family:var(--font-heading); font-size:24px;">Salle 1</h3>
+                            <span class="room-area" style="font-size:12px; background: rgba(232, 62, 140, 0.1); color: #e83e8c; padding: 4px 10px; border-radius: 20px; font-weight: 700;">60 m²</span>
+                        </div>
+                        <p class="room-address" style="color:#6c757d; font-size:14px; margin-bottom:24px;">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px; flex-grow:1;">
+                            <div class="detail-item" style="display:flex; flex-direction:column;">
+                                <span class="detail-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">MAX. Pers.</span>
+                                <span class="detail-val" style="font-size:18px; font-weight:700;">22</span>
                             </div>
-                            <div class="detail-price">
-                                <span class="price-label">à partir de</span>
-                                <span class="price-val">20 € ht / h</span>
-                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            <div class="detail-price" style="display:flex; flex-direction:column; text-align:right;">
+                                <span class="price-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">à partir de</span>
+                                <span class="price-val" style="font-size:22px; font-weight:800; color:#111;">20 € ht / h</span>
+                                <span class="price-sub" style="font-size:10px; color:#adb5bd;">Tarifs hors spéciaux</span>
                             </div>
                         </div>
                         <div class="room-footer">
-                            <a href="salle1.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
-                        </div>
-                    </article>
-                    
-                    <!-- Salle 4 -->
-                    <article class="room-card reveal">
-                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
-                            <h3 class="room-title" style="margin-bottom:0;">Salle 4</h3>
-                            <span class="room-area" style="font-size:14px;">40 m2</span>
-                        </div>
-                        <p class="room-address">160, Rue Oberkampf, 75011</p>
-                        <div class="room-details">
-                            <div class="detail-item">
-                                <span class="detail-label">MAX. Pers.</span>
-                                <span class="detail-val">12</span>
-                            </div>
-                            <div class="detail-price">
-                                <span class="price-label">à partir de</span>
-                                <span class="price-val">14 € ht / h</span>
-                                <span class="price-sub">Tarifs hors spéciaux</span>
-                            </div>
-                        </div>
-                        <div class="room-footer">
-                            <a href="salle4.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                            <a href="salle1.html" class="btn" style="width:100%; display:flex; justify-content:center; padding:14px; background:#e83e8c; color:#fff; border-radius:50px; font-weight:600; text-decoration:none;">VOIR LA SALLE</a>
                         </div>
                     </article>
 
-                    <!-- Salle 2 -->
-                    <article class="room-card reveal">
-                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
-                            <h3 class="room-title" style="margin-bottom:0;">Salle 2</h3>
-                            <span class="room-area" style="font-size:14px;">60 m2</span>
+
+                    <article class="room-card reveal" style="padding: 24px; display:flex; flex-direction:column;">
+                        <div class="room-img" style="height: 200px; background-color: #f7f7f7; border-radius: 12px; margin-bottom: 24px; display:flex; align-items:center; justify-content:center; color:#adb5bd; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; border:2px dashed #e9ecef;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Insérer Photo
                         </div>
-                        <p class="room-address">160, Rue Oberkampf, 75011</p>
-                        <div class="room-details">
-                            <div class="detail-item">
-                                <span class="detail-label">MAX. Pers.</span>
-                                <span class="detail-val">22</span>
+                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
+                            <h3 class="room-title" style="margin-bottom:0; font-family:var(--font-heading); font-size:24px;">Salle 2</h3>
+                            <span class="room-area" style="font-size:12px; background: rgba(232, 62, 140, 0.1); color: #e83e8c; padding: 4px 10px; border-radius: 20px; font-weight: 700;">60 m²</span>
+                        </div>
+                        <p class="room-address" style="color:#6c757d; font-size:14px; margin-bottom:24px;">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px; flex-grow:1;">
+                            <div class="detail-item" style="display:flex; flex-direction:column;">
+                                <span class="detail-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">MAX. Pers.</span>
+                                <span class="detail-val" style="font-size:18px; font-weight:700;">22</span>
                             </div>
-                            <div class="detail-price">
-                                <span class="price-label">à partir de</span>
-                                <span class="price-val">20 € ht / h</span>
-                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            <div class="detail-price" style="display:flex; flex-direction:column; text-align:right;">
+                                <span class="price-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">à partir de</span>
+                                <span class="price-val" style="font-size:22px; font-weight:800; color:#111;">20 € ht / h</span>
+                                <span class="price-sub" style="font-size:10px; color:#adb5bd;">Tarifs hors spéciaux</span>
                             </div>
                         </div>
                         <div class="room-footer">
-                            <a href="salle2.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                            <a href="salle2.html" class="btn" style="width:100%; display:flex; justify-content:center; padding:14px; background:#e83e8c; color:#fff; border-radius:50px; font-weight:600; text-decoration:none;">VOIR LA SALLE</a>
                         </div>
                     </article>
 
-                    <!-- Salle 5 -->
-                    <article class="room-card reveal">
-                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
-                            <h3 class="room-title" style="margin-bottom:0;">Salle 5</h3>
-                            <span class="room-area" style="font-size:14px;">55 m2</span>
+
+                    <article class="room-card reveal" style="padding: 24px; display:flex; flex-direction:column;">
+                        <div class="room-img" style="height: 200px; background-color: #f7f7f7; border-radius: 12px; margin-bottom: 24px; display:flex; align-items:center; justify-content:center; color:#adb5bd; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; border:2px dashed #e9ecef;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Insérer Photo
                         </div>
-                        <p class="room-address">31, Rue d'Alésia, 75014</p>
-                        <div class="room-details">
-                            <div class="detail-item">
-                                <span class="detail-label">MAX. Pers.</span>
-                                <span class="detail-val">17</span>
+                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
+                            <h3 class="room-title" style="margin-bottom:0; font-family:var(--font-heading); font-size:24px;">Salle 3</h3>
+                            <span class="room-area" style="font-size:12px; background: rgba(232, 62, 140, 0.1); color: #e83e8c; padding: 4px 10px; border-radius: 20px; font-weight: 700;">75 m²</span>
+                        </div>
+                        <p class="room-address" style="color:#6c757d; font-size:14px; margin-bottom:24px;">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px; flex-grow:1;">
+                            <div class="detail-item" style="display:flex; flex-direction:column;">
+                                <span class="detail-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">MAX. Pers.</span>
+                                <span class="detail-val" style="font-size:18px; font-weight:700;">30</span>
                             </div>
-                            <div class="detail-price">
-                                <span class="price-label">à partir de</span>
-                                <span class="price-val">19 € ht / h</span>
-                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            <div class="detail-price" style="display:flex; flex-direction:column; text-align:right;">
+                                <span class="price-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">à partir de</span>
+                                <span class="price-val" style="font-size:22px; font-weight:800; color:#111;">40 € ht / h</span>
+                                <span class="price-sub" style="font-size:10px; color:#adb5bd;">Tarifs hors spéciaux</span>
                             </div>
                         </div>
                         <div class="room-footer">
-                            <a href="salle5.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                            <a href="salle3.html" class="btn" style="width:100%; display:flex; justify-content:center; padding:14px; background:#e83e8c; color:#fff; border-radius:50px; font-weight:600; text-decoration:none;">VOIR LA SALLE</a>
                         </div>
                     </article>
 
-                    <!-- Salle 3 -->
-                    <article class="room-card reveal">
-                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
-                            <h3 class="room-title" style="margin-bottom:0;">Salle 3</h3>
-                            <span class="room-area" style="font-size:14px;">75 m2</span>
+
+                    <article class="room-card reveal" style="padding: 24px; display:flex; flex-direction:column;">
+                        <div class="room-img" style="height: 200px; background-color: #f7f7f7; border-radius: 12px; margin-bottom: 24px; display:flex; align-items:center; justify-content:center; color:#adb5bd; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; border:2px dashed #e9ecef;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Insérer Photo
                         </div>
-                        <p class="room-address">160, Rue Oberkampf, 75011</p>
-                        <div class="room-details">
-                            <div class="detail-item">
-                                <span class="detail-label">MAX. Pers.</span>
-                                <span class="detail-val">30</span>
+                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
+                            <h3 class="room-title" style="margin-bottom:0; font-family:var(--font-heading); font-size:24px;">Salle 4</h3>
+                            <span class="room-area" style="font-size:12px; background: rgba(232, 62, 140, 0.1); color: #e83e8c; padding: 4px 10px; border-radius: 20px; font-weight: 700;">40 m²</span>
+                        </div>
+                        <p class="room-address" style="color:#6c757d; font-size:14px; margin-bottom:24px;">160, Rue Oberkampf, 75011</p>
+                        <div class="room-details" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px; flex-grow:1;">
+                            <div class="detail-item" style="display:flex; flex-direction:column;">
+                                <span class="detail-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">MAX. Pers.</span>
+                                <span class="detail-val" style="font-size:18px; font-weight:700;">12</span>
                             </div>
-                            <div class="detail-price">
-                                <span class="price-label">à partir de</span>
-                                <span class="price-val">40 € ht / h</span>
-                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            <div class="detail-price" style="display:flex; flex-direction:column; text-align:right;">
+                                <span class="price-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">à partir de</span>
+                                <span class="price-val" style="font-size:22px; font-weight:800; color:#111;">14 € ht / h</span>
+                                <span class="price-sub" style="font-size:10px; color:#adb5bd;">Tarifs hors spéciaux</span>
                             </div>
                         </div>
                         <div class="room-footer">
-                            <a href="salle3.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                            <a href="salle4.html" class="btn" style="width:100%; display:flex; justify-content:center; padding:14px; background:#e83e8c; color:#fff; border-radius:50px; font-weight:600; text-decoration:none;">VOIR LA SALLE</a>
                         </div>
                     </article>
 
-                    <!-- Salle 6 -->
-                    <article class="room-card reveal">
-                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
-                            <h3 class="room-title" style="margin-bottom:0;">Salle 6</h3>
-                            <span class="room-area" style="font-size:14px;">25 m2</span>
+
+                    <article class="room-card reveal" style="padding: 24px; display:flex; flex-direction:column;">
+                        <div class="room-img" style="height: 200px; background-color: #f7f7f7; border-radius: 12px; margin-bottom: 24px; display:flex; align-items:center; justify-content:center; color:#adb5bd; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; border:2px dashed #e9ecef;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Insérer Photo
                         </div>
-                        <p class="room-address">31, Rue d'Alésia, 75014</p>
-                        <div class="room-details">
-                            <div class="detail-item">
-                                <span class="detail-label">MAX. Pers.</span>
-                                <span class="detail-val">4</span>
+                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
+                            <h3 class="room-title" style="margin-bottom:0; font-family:var(--font-heading); font-size:24px;">Salle 5</h3>
+                            <span class="room-area" style="font-size:12px; background: rgba(232, 62, 140, 0.1); color: #e83e8c; padding: 4px 10px; border-radius: 20px; font-weight: 700;">55 m²</span>
+                        </div>
+                        <p class="room-address" style="color:#6c757d; font-size:14px; margin-bottom:24px;">31, Rue d'Alésia, 75014</p>
+                        <div class="room-details" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px; flex-grow:1;">
+                            <div class="detail-item" style="display:flex; flex-direction:column;">
+                                <span class="detail-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">MAX. Pers.</span>
+                                <span class="detail-val" style="font-size:18px; font-weight:700;">17</span>
                             </div>
-                            <div class="detail-price">
-                                <span class="price-label">à partir de</span>
-                                <span class="price-val">15 € ht / h</span>
-                                <span class="price-sub">Tarifs hors spéciaux</span>
+                            <div class="detail-price" style="display:flex; flex-direction:column; text-align:right;">
+                                <span class="price-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">à partir de</span>
+                                <span class="price-val" style="font-size:22px; font-weight:800; color:#111;">19 € ht / h</span>
+                                <span class="price-sub" style="font-size:10px; color:#adb5bd;">Tarifs hors spéciaux</span>
                             </div>
                         </div>
                         <div class="room-footer">
-                            <a href="salle6.html" class="btn btn-primary btn-full">VOIR LA SALLE</a>
+                            <a href="salle5.html" class="btn" style="width:100%; display:flex; justify-content:center; padding:14px; background:#e83e8c; color:#fff; border-radius:50px; font-weight:600; text-decoration:none;">VOIR LA SALLE</a>
                         </div>
                     </article>
 
-                </div>
+
+                    <article class="room-card reveal" style="padding: 24px; display:flex; flex-direction:column;">
+                        <div class="room-img" style="height: 200px; background-color: #f7f7f7; border-radius: 12px; margin-bottom: 24px; display:flex; align-items:center; justify-content:center; color:#adb5bd; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; border:2px dashed #e9ecef;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Insérer Photo
+                        </div>
+                        <div class="room-title-wrapper" style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px;">
+                            <h3 class="room-title" style="margin-bottom:0; font-family:var(--font-heading); font-size:24px;">Salle 6</h3>
+                            <span class="room-area" style="font-size:12px; background: rgba(232, 62, 140, 0.1); color: #e83e8c; padding: 4px 10px; border-radius: 20px; font-weight: 700;">25 m²</span>
+                        </div>
+                        <p class="room-address" style="color:#6c757d; font-size:14px; margin-bottom:24px;">31, Rue d'Alésia, 75014</p>
+                        <div class="room-details" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px; flex-grow:1;">
+                            <div class="detail-item" style="display:flex; flex-direction:column;">
+                                <span class="detail-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">MAX. Pers.</span>
+                                <span class="detail-val" style="font-size:18px; font-weight:700;">4</span>
+                            </div>
+                            <div class="detail-price" style="display:flex; flex-direction:column; text-align:right;">
+                                <span class="price-label" style="font-size:10px; color:#adb5bd; font-weight:700; text-transform:uppercase;">à partir de</span>
+                                <span class="price-val" style="font-size:22px; font-weight:800; color:#111;">15 € ht / h</span>
+                                <span class="price-sub" style="font-size:10px; color:#adb5bd;">Tarifs hors spéciaux</span>
+                            </div>
+                        </div>
+                        <div class="room-footer">
+                            <a href="salle6.html" class="btn" style="width:100%; display:flex; justify-content:center; padding:14px; background:#e83e8c; color:#fff; border-radius:50px; font-weight:600; text-decoration:none;">VOIR LA SALLE</a>
+                        </div>
+                    </article>
+
+</div>
 </div>
         </section>
     </main>
