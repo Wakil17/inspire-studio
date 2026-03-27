@@ -1617,10 +1617,10 @@ body.nav-open {
         z-index: 999 !important;
     }
     .main-nav.open .nav-link {
-        color: var(--color-heading) !important; /* Force dark text for visibility */
+        color: var(--color-text) !important; /* Force dark text for visibility */
     }
     .mobile-menu-toggle.active .hamburger-line {
-        background: var(--color-heading) !important; /* Force dark X icon so it is visible on white */
+        background: var(--color-text) !important; /* Force dark X icon so it is visible on white */
     }
 }
 
@@ -1629,5 +1629,6 @@ body.nav-open {
     body.nav-open .site-header {
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
+        transition: none !important;
     }
 }
