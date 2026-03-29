@@ -42,9 +42,20 @@
 
 
 <style>
-/* Mobile optimization for the Search Pill v2 */
+/* Mobile optimization for the Search Pill v3 */
 @media (max-width: 768px) {
-    /* Push the massive vertical pill downwards outside the hero bounds */
+    /* Compress the typography so NOS SALLES remains prominent and doesn't wrap awkwardly */
+    .hero-title {
+        font-size: 3.5rem !important;
+        margin-top: -40px !important;
+    }
+
+    /* Fix overflow clipping bug on the hero container so the pill can escape the frame */
+    .hero-salles {
+        overflow: visible !important;
+    }
+
+    /* Push the massive vertical pill downwards completely outside the hero bounds */
     .search-pill-container {
         top: 100% !important;
         bottom: auto !important;
@@ -122,7 +133,7 @@
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="salles.html" class="nav-link active">Nos salles</a></li>
                     <li><a href="#" class="nav-link">Inspire Studio</a></li>
-                    <li><a href="#" class="nav-link">Tarifs</a></li>
+                    <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
                     <li><a href="#" class="nav-link">Contact</a></li>
                     <li><a href="#" class="nav-link nav-cta">Réserver</a></li>
                 </ul>
@@ -359,7 +370,7 @@
                     <ul>
                         <li><a href="#">Accueil</a></li>
                         <li><a href="#">Nos salles</a></li>
-                        <li><a href="#">Tarifs</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Réserver</a></li>
                     </ul>
