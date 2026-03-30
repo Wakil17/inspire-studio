@@ -119,6 +119,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // --- Pricing Tabs (Tarifs page) ---
+    document.querySelectorAll('.pricing-card').forEach(card => {
+        card.querySelectorAll('.pricing-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.tab;
+                card.querySelectorAll('.pricing-tab').forEach(t => t.classList.remove('active'));
+                card.querySelectorAll('.pricing-tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                card.querySelector(`.pricing-tab-content[data-content="${target}"]`).classList.add('active');
+            });
+        });
+    });
+
+
     // --- Partners Category Tabs ---
     const tabs = document.querySelectorAll('.partners-tab');
     const partnerCards = document.querySelectorAll('.partner-card');
